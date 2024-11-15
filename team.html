@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Card Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
+  transition: 0.5s;
+}
+h1 {
+  text-align: center;
+  color: #222;
+  padding: 20px;
+}
+.hteam {
+  text-align: center;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  width: 100%;
+  max-width: 300px;
+  height: 450px;
+  background: transparent;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0px 0px 20px 1px #9592927a;
+}
+.bg {
+  width: 90%;
+  transform: rotate(90deg);
+  margin-left: 20px;
+}
+.one {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 70px;
+  left: 10px;
+}
+.card:hover .bg {
+  transform: rotate(120deg);
+}
+.card h3 {
+  text-align: center;
+  color: #222;
+  cursor: pointer;
+}
+.card h4 {
+  text-align: center;
+  color: grey;
+  font-weight: 500;
+}
+.icon {
+  text-align: center;
+  margin-top: 40px;
+}
+.icon ion-icon {
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  background: #ffc400;
+  color: #fff;
+  border: 1px solid #ffc400;
+  opacity: 0;
+}
+.icon ion-icon:hover {
+  color: grey;
+  border: 1px solid grey;
+  background: transparent;
+}
+.card:hover .icon ion-icon {
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+<body>
+<header>
+<h1>Our Team</h1>
+<h3 class="hteam">Our team specializes in harnessing the power of artificial intelligence to drive innovative solutions. With expertise in machine learning, deep learning, natural language processing, and data analysis, we tackle complex challenges with creativity and precision.</h3>
+<div class="container">
+  <div class="card">
+    <img class="one" src="./client-1.jpg">
+    <h3>Janathan Samantha</h3>
+    <h4>Web Developer</h4>
+    <div class="icon">
+      <ion-icon name="logo-skype"></ion-icon>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-twitter"></ion-icon>
+    </div>
+  </div>
+  <div class="card">
+    <img class="one" src="./client-2.jpg">
+    <h3>Daniel David Deo</h3>
+    <h4>Programmer</h4>
+    <div class="icon">
+      <ion-icon name="logo-skype"></ion-icon>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-twitter"></ion-icon>
+    </div>
+  </div>
+  <div class="card">
+    <img class="one" src="./client-3.jpg">
+    <h3>Jhon Doe</h3>
+    <h4>Web Designer</h4>
+    <div class="icon">
+      <ion-icon name="logo-skype"></ion-icon>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-icon name="logo-twitter"></ion-icon>
+    </div>
+  </div>
+</div>
+</header>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
